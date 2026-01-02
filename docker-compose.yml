@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  todo-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vibe-coding-todo
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    # Optional: Add environment variables if needed
+    # environment:
+    #   - NODE_ENV=production
